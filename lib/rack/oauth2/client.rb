@@ -20,7 +20,7 @@ module Rack
         params[:response_type] = Array(params[:response_type]).join(' ')
         params[:scope] = Array(params[:scope]).join(' ')
         Util.redirect_uri absolute_uri_for(authorization_endpoint), :query, params.merge(
-          client_id: self.identifier,
+          # client_id: self.identifier,
           redirect_uri: self.redirect_uri
         )
       end
